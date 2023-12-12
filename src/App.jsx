@@ -11,6 +11,10 @@ function App() {
   const [url, setURL] = useState("https://rickandmortyapi.com/api/character?page=2")
 
   const [exampleState, setExampleState] = useState(1);
+
+
+
+
   async function fetchCharactersAsync () {
     setError("");
     try {
@@ -30,9 +34,25 @@ function App() {
       setError(error.message);
     }
   }
+
+  async function getCharacterData() {
+  
+    const results = await Promise.all([
+      fetch(url),
+    ])
+    const [url]=handle(results)
+}
+
+
+
+
+
+
   
   useEffect(() => {
-    fetchCharactersAsync().catch((error) => console.log(error));
+    // fetchCharactersAsync().catch((error) => console.log(error));
+    getCharacterData().catch((error) => console.log(error));
+
   }, [])
 
   useEffect(() => {

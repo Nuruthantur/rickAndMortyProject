@@ -7,6 +7,7 @@ function ChCard({ character }) {
     <div >
       <h2>{character.name}</h2>
       <img src={character.image} alt={`Picture of ${character.name}`} />
+      <button>learn more</button>
     </div>
   )
 }
