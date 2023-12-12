@@ -32,17 +32,6 @@ function App() {
   }
   
   useEffect(() => {
-    // console.log("use effect has run")
-    // function fetchCharacters () {
-    //   fetch("https://rickandmortyapi.com/api/character")
-    //     .then((response) => response.json())
-    //     .then((result) => {
-    //       console.log(result);
-    //       setCharacters(result.results);
-    //     })
-    //     .catch((error) => console.log(error))
-    // }
-
     fetchCharactersAsync().catch((error) => console.log(error));
   }, [])
 
