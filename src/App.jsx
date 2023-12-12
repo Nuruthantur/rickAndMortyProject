@@ -35,12 +35,12 @@ function App() {
     }
   }
 
-  async function getCharacterData() {
-  
-    const results = await Promise.all([
-      fetch(url),
-    ])
-    const [url]=handle(results)
+async function getCharacterData() {
+  const results = await Promise.allSettled([
+    fetch(url),
+    response.json()
+  ])
+  const [response, result] = handle(results)
 }
 
 
@@ -50,8 +50,8 @@ function App() {
 
   
   useEffect(() => {
-    // fetchCharactersAsync().catch((error) => console.log(error));
-    getCharacterData().catch((error) => console.log(error));
+    fetchCharactersAsync().catch((error) => console.log(error));
+    // getCharacterData().catch((error) => console.log(error));
 
   }, [])
 
