@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './styles/App.css';
 import ChCard from './components/ChCard';
+// import './styles/App.css'
+import styles1 from './styles/test.module.css';
+import styles2 from './styles/test2.module.css';
 
 
 function App() {

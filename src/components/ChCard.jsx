@@ -1,15 +1,17 @@
-/* eslint-disable react/prop-types */
 // import React from 'react'
-import '../styles/ChCard.css';
+import '../styles/ChCard.css'
+import Button from 'react-bootstrap/Button';
 
-function ChCard({ character }) {
+function ChCard({ character, handleShow }) {
 
   return (
-    <div className="card-container">
-      <h2>{character.name}</h2>
-      <img src={character.image} alt={`Picture of ${character.name}`} />
-      <button>learn more</button>
-    </div>
+   
+      <div className="card-container" style={{ display: "flex", flexDirection: "column" }}>
+        <h1>{character.name}</h1>
+        <img src={character.image} alt={`Picture of ${character.name}`} />
+        <Button variant='primary' onClick={() => handleShow(character)}>Learn more!</Button>
+      </div>
+      
   )
 }
 
