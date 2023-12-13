@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './styles/App.css';
 import ChCard from './components/ChCard';
 
 
@@ -35,13 +35,13 @@ function App() {
     }
   }
 
-async function getCharacterData() {
-  const results = await Promise.allSettled([
-    fetch(url),
-    response.json()
-  ])
-  const [response, result] = handle(results)
-}
+// async function getCharacterData() {
+//   const results = await Promise.allSettled([
+//     fetch(url),
+//     response.json()
+//   ])
+//   const [response, result] = handle(results)
+// }
 
 
 
