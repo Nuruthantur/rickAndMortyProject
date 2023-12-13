@@ -64,7 +64,9 @@ function Characters() {
         <Modal.Header closeButton>
           <Modal.Title>{ selectedCharacter && selectedCharacter.name }</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+              <Modal.Body>  Text goes here!
+                  {/* <Modal.Text>{ selectedCharacter && selectedCharacter.name }</Modal.Text> */}
+              </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -74,8 +76,6 @@ function Characters() {
           </Button>
         </Modal.Footer>
       </Modal>
-
-      {/* <MainLayout>hello hello</MainLayout> */}
 
     </MainLayout>
   )
