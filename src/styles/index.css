@@ -1,8 +1,12 @@
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  background-image: radial-gradient(farthest-corner at 40px 40px,
+  #f35 0%, #43e 100%);
 }
+
+.container {
+  height: 100vh;
+ }
 
 .cards-box {
   display: flex;

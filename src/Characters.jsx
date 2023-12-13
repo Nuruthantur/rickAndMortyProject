@@ -54,7 +54,6 @@ function Characters() {
           return (
             <React.Fragment key={char.id}>
               <ChCard character={char} handleShow={handleShow} />
-              {/* <Model character={char} /> */}
             </React.Fragment>
           )
         }) }
@@ -76,7 +75,6 @@ function Characters() {
           </Button>
         </Modal.Footer>
       </Modal>
-
     </MainLayout>
   )
 }
