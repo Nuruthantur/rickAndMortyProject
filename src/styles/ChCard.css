@@ -1,12 +1,26 @@
-.card-container {
-    border: 4px solid green;
-    height: 30em;
+.cards-box {
+  gap: 200px 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  
+}
+
+
+.card-body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    
+    
 }
 
 .flip-card-outer {
-  width: 300px;
-  height: 400px;
-  margin: 25px 0;
+  /* margin: 25px 0; */
   display: flex;
   flex-direction: column;
 

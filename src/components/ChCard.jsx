@@ -1,8 +1,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-// import cn from "classnames";
-// import '../styles/ChCard.css'
-import '../styles/flipcardStyles.scss'
+import cn from "classnames";
+import '../styles/ChCard.css'
+// import '../styles/flipcardStyles.scss'
 import '../styles/ChCard.scss'
 
 
@@ -12,7 +12,7 @@ function ChCard({ character, handleShow }) {
     <div className="flip-card">
       <div className={"flip-card-inner"}>
         <div className="flip-card-front">
-          <div className="card-body d-flex justify-content-center align-items-center">
+          <div className="card-body ">
             <h1>{character.name}</h1>
             <img src={character.image} alt={`Picture of ${character.name}`} />
           </div>

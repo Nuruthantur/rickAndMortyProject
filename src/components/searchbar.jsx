@@ -1,4 +1,4 @@
-async function fetchCharactersAsync() {
+export default async function fetchCharactersAsync() {
   setSearchTerm('');
   setSearchResults([]);
 
@@ -28,3 +28,4 @@ async function fetchCharactersAsync() {
     console.error(error);
   }
 }
+

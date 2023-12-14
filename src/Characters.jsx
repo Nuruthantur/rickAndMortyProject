@@ -51,7 +51,6 @@ function Characters() {
 
   return (
     <MainLayout>
-
       { error && <h2>{error}</h2> }
       <div className='cards-box'>
         { characters.map((char) => {
@@ -65,11 +64,13 @@ function Characters() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{ selectedCharacter && selectedCharacter.name }</Modal.Title>
+          <Modal.Title>{selectedCharacter && selectedCharacter.name}</Modal.Title>
         </Modal.Header>
-              <Modal.Body>  Text goes here!
-                  {/* <Modal.Text>{ selectedCharacter && selectedCharacter.name }</Modal.Text> */}
-              </Modal.Body>
+        <Modal.Body> 
+          <p>{selectedCharacter && selectedCharacter.species}</p>
+          <p>{selectedCharacter && selectedCharacter.status}</p>
+          <p>{selectedCharacter && selectedCharacter.gender}</p>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
