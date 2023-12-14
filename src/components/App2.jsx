@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import '../styles/App.css'
 
 
 function App2() {
-  // let myName = "Emily"
-  const [myName, setMyName] = useState("Emily");
+
+  const [myName, setMyName] = useState("Human Name");
   const [inputValue, setInputValue] = useState("");
-
-
-  // console.log(myName)
-  // console.log(setMyName)
 
   console.log("component is rendered")
 
@@ -23,7 +19,6 @@ function App2() {
     console.log("use effect has run")
   },[])
 
-
   return (
     <React.Fragment>
       <h1>My name is {myName}!</h1>
@@ -33,6 +28,5 @@ function App2() {
     </React.Fragment>
   )
 }
-
 
 export default App2

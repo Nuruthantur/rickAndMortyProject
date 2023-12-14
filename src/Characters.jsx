@@ -38,12 +38,16 @@ function Characters() {
       setError(error.message);
     }
   }
+//   async function fetchCharactersAsync() {
+//   const responses = await Promise.all([fetch("https://rickandmortyapi.com/api/character")
+//   ])
+//   const results = await Promise.all(responses.map((res) => res.json()))
+//   console.log(results)
+// }
   
   useEffect(() => {
     fetchCharactersAsync().catch((error) => console.log(error));
   }, [])
-
-
 
   return (
     <MainLayout>

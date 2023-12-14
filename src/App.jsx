@@ -1,53 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import ChCard from './components/ChCard';
 import Flipcard from './components/flipcard';
-// import './styles/App.css'
-import styles1 from './styles/test.module.css';
-import styles2 from './styles/test2.module.css';
 
-const cards = [
-  {
-    id: "1",
-    variant: "hover",
-    front: "Hover",
-    back: "Back"
-  },
-  {
-    id: "2",
-    variant: "click",
-    front: "Click",
-    back: "Back"
-  },
-  {
-    id: "3",
-    variant: "focus",
-    front: "Focus",
-    back: "Back"
-  }
-];
+
 
 function App() {
 
-
-
-
-  
   const [characters, setCharacters] = useState([]);
   const [fetchResult, setFetchResult] = useState(null);
   const [error, setError] = useState("");
-  // console.log(characters)
   const [url, setURL] = useState("https://rickandmortyapi.com/api/character?page=2")
 
   const [exampleState, setExampleState] = useState(1);
-
-
-
 
   async function fetchCharactersAsync () {
     setError("");
     try {
       const response = await fetch(url);
-      // console.log(response);
       const result = await response.json();
       console.log(result);
 
@@ -63,24 +32,17 @@ function App() {
     }
   }
 
-// async function getCharacterData() {
-//   const results = await Promise.allSettled([
-//     fetch(url),
-//     response.json()
+
+//   async function getCharacterData() {
+//   const responses = await Promise.all([
+//     fetch(url)
 //   ])
-//   const [response, result] = handle(results)
+//   const results = await Promise.all(responses.map((res) => res.json()))
+//   console.log(results)
 // }
-
-
-
-
-
-
   
   useEffect(() => {
     fetchCharactersAsync().catch((error) => console.log(error));
-    // getCharacterData().catch((error) => console.log(error));
-
   }, [])
 
   useEffect(() => {
@@ -89,6 +51,24 @@ function App() {
   
 
   return (
+
+// Option 1 - Testing
+    // <React.Fragment>
+    //   {error && <h2>{error}</h2>}
+    //   {exampleState}
+    //   <button onClick={() => setExampleState(exampleState + 1)}>click me!</button>
+    // <div className="container">
+    //   <div className="row h-100">
+    //     <div class="col d-flex flex-column flex-md-row justify-content-around align-items-center">
+    //       {cards.map((char) => (
+    //         <FlipCard key={char.id} card={char} />
+    //       ))}
+    //     </div>
+    //   </div>
+    //   </div>
+    //   </React.Fragment>
+
+    // Option 2 - Testing
     <React.Fragment>
       { error && <h2>{error}</h2> }
       { exampleState }
@@ -105,9 +85,19 @@ function App() {
     </React.Fragment>
   )
 
-  
-
 }
-
-
 export default App
+
+// export default function App() {
+//   return (
+//     <div className="container">
+//       <div className="row h-100">
+//         <div class="col d-flex flex-column flex-md-row justify-content-around align-items-center">
+//           {cards.map((card) => (
+//             <FlipCard key={card.id} card={card} />
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
