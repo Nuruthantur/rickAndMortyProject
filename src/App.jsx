@@ -32,7 +32,6 @@ function App() {
     }
   }
 
-
 //   async function getCharacterData() {
 //   const responses = await Promise.all([
 //     fetch(url)
@@ -48,7 +47,6 @@ function App() {
   useEffect(() => {
     console.log("use effect running");
   }, [exampleState])
-  
 
   return (
 

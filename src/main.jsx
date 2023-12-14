@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     {/* <App /> */}
     <Characters/>
+    {/* <Characters2/> */}
 
  
   </React.StrictMode>,
