@@ -16,8 +16,9 @@ function Characters() {
   function filterCharactersSearchbar(searchTerm) {
     const filteredArray = [...characters].filter((character) => { return character.name.toLowerCase().includes(searchTerm.toLowerCase()) }
     ); console.log("result search bar ", filteredArray);
+    setFilteredCharacters(filteredArray)
   }
-  filterCharactersSearchbar("Rick");
+  // filterCharactersSearchbar("Rick"); test function for "Rick"
 
   const handleClose = () => setShow(false);
   const handleShow = (character) => {
@@ -62,23 +63,31 @@ function Characters() {
 
       { error && <h2>{error}</h2> }
       <div className='cards-box'>
-        { characters.map((char) => {
+        { filteredCharacters.length===0 && characters.map((char) => {
           return (
             <React.Fragment key={char.id}>
               <ChCard character={char} handleShow={handleShow} />
             </React.Fragment>
           )
-        }) }
+        })}
+        { filteredCharacters.length > 0 && filteredCharacters.map((char) => {
+          return (
+            <React.Fragment key={char.id}>
+              <ChCard character={char} handleShow={handleShow} />
+            </React.Fragment>
+          )
+        })}
       </div>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{selectedCharacter && selectedCharacter.name}</Modal.Title>
+          <Modal.Title>Name: {selectedCharacter && selectedCharacter.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body> 
-          <p>{"Species" && selectedCharacter && selectedCharacter.species}</p>
-          <p>{selectedCharacter && selectedCharacter.status}</p>
-          <p>{selectedCharacter && selectedCharacter.gender}</p>
+          <p>Species: {selectedCharacter && selectedCharacter.species}</p>
+          <p>Status: {selectedCharacter && selectedCharacter.status}</p>
+          <p>Gender: {selectedCharacter && selectedCharacter.gender}</p>
+          
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
