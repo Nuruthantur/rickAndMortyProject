@@ -3,8 +3,8 @@ function MainLayout(props) {
   console.log(props);
   return (
     <>
-      <nav style={{ border: "solid black 1px", padding: "1em" }}>search bar goes here
-        <input type="text" placeholder="Search" onChange={(e) => props.filterCharactersSearchbar(e.target.value)
+      <nav style={{ border: "solid black 1px", padding: "1em", display:"flex", alignItems:"center", justifyContent:"center"}}>
+        <input  type="text" placeholder="Search" onChange={(e) => props.filterCharactersSearchbar(e.target.value)
         } />
         {/* onChange={handleSearch} */}
       </nav>

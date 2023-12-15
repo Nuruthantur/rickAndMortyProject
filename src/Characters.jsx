@@ -15,7 +15,7 @@ function Characters() {
 
   function filterCharactersSearchbar(searchTerm) {
     const filteredArray = [...characters].filter((character) => { return character.name.toLowerCase().includes(searchTerm.toLowerCase()) }
-    ); console.log("hello ", filteredArray);
+    ); console.log("result search bar ", filteredArray);
   }
   filterCharactersSearchbar("Rick");
 
@@ -23,9 +23,9 @@ function Characters() {
   const handleShow = (character) => {
     setShow(true);
     setSelectedCharacter(character);
-    console.log(character)
+    // console.log(character)
   };
-  console.log(characters, info)
+  // console.log(characters, info)
 
   async function fetchCharactersAsync () {
     setError("");
@@ -76,7 +76,7 @@ function Characters() {
           <Modal.Title>{selectedCharacter && selectedCharacter.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body> 
-          <p>{selectedCharacter && selectedCharacter.species}</p>
+          <p>{"Species" && selectedCharacter && selectedCharacter.species}</p>
           <p>{selectedCharacter && selectedCharacter.status}</p>
           <p>{selectedCharacter && selectedCharacter.gender}</p>
         </Modal.Body>
