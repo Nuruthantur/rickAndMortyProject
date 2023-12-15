@@ -11,6 +11,13 @@ function Characters() {
   const [error, setError] = useState("");
   const [show, setShow] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
+
+  function filterCharactersSearchbar(searchTerm) {
+    const filteredArray = [...characters].filter((character) => { return character.name.toLowerCase().includes(searchTerm.toLowerCase()) }
+    ); console.log("hello ", filteredArray);
+  }
+  filterCharactersSearchbar("Rick");
 
   const handleClose = () => setShow(false);
   const handleShow = (character) => {
@@ -50,7 +57,9 @@ function Characters() {
   }, [])
 
   return (
-    <MainLayout>
+
+    <MainLayout filterCharactersSearchbar={filterCharactersSearchbar}>
+
       { error && <h2>{error}</h2> }
       <div className='cards-box'>
         { characters.map((char) => {

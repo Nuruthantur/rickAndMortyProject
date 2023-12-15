@@ -4,7 +4,9 @@ function MainLayout(props) {
   return (
     <>
       <nav style={{ border: "solid black 1px", padding: "1em" }}>search bar goes here
-        {/* <Input type="text" placeholder="Search" onChange={handleSearch} /> */}
+        <input type="text" placeholder="Search" onChange={(e) => props.filterCharactersSearchbar(e.target.value)
+        } />
+        {/* onChange={handleSearch} */}
       </nav>
       {props.children}
       <footer style={{ border: "solid black 1px", padding: "1em" }}>
