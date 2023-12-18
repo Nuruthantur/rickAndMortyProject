@@ -36,3 +36,71 @@ function ChCard({ character, handleShow }) {
 
 export default ChCard
 
+// STYLING
+
+// const Main = styled.div`  
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-flow: row wrap;
+
+// `;
+
+// Flip Card Container: 
+// const FlipCardWrapper = styled.div `
+//     background-color: transparent;
+//     width: 300px;
+//     height: 300px;
+//     perspective: 1000px;
+//     margin: 2em;
+// `;
+
+
+// FlipCardInner: Needed to position the front and back side and to create the 3D effect
+// Creates a horizontal flip when you move over the flip box container => hover
+// const FlipCardInner = styled.div `
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     text-align: center;
+//     transition: transform .8s;
+//     transform-style: preserve-3d;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//     border-radius: .2em;
+//     _border: 1px solid #bbb;
+
+//     &:hover {
+//         transform: rotateY(180deg);  
+//     }
+// `;
+
+
+
+
+
+// const Button = styled.button`
+//     margin: .2em 0 .4em;
+//     background-color: var(--text-color-dark);
+//     color: var(--color-accent);
+//     cursor: pointer;
+//     padding: 1em 1.5em;
+//     border: none;
+//     font-size: 1rem;
+//     font-weight: 600;
+//     border-radius: .5em;
+//     text-transform: uppercase;
+//     transition: 0.4s;
+//     box-shadow: var(--box-shadow);
+
+//     &:hover {
+
+//         transform: scale(1.05);
+//         transition: 0.4s;
+
+//     }
+// `;
+
+
+
+
+

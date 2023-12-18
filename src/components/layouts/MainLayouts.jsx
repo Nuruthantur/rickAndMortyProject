@@ -10,7 +10,8 @@ function MainLayout(props) {
       </nav>
       {props.children}
       <footer style={{ border: "solid black 1px", padding: "1em" }}>
-        here is footer
+        <input type="button" id="prevPage" />
+        <input type="button" id="nextPage" />
       </footer>
     </>
   );

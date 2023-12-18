@@ -5,6 +5,7 @@ import './styles/index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Characters from './Characters.jsx';
 import Characters2 from './Characters2.jsx';
+import axios from 'axios';
 
 // import fetchCharactersAsync from './components/searchbar.jsx'
 
